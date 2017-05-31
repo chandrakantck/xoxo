@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+	<style type="text/css">
+		img
+		{
+			height:160px;
+			width: 160px;
+		}
+		table
+		{
+			background-color: gray;
+		}
+	</style>
+</head>
+<body onload=init() >
+ 	<table border="1"  id=tbl align="center" style="height: 500px;width: 500px;">
+ 		<tr>
+ 			<td id=td11><img id=im11 ></img></td>
+ 			<td id=td12><img id=im12 ></img></td>
+ 			<td id=td13><img id=im13 ></img></td>
+ 		</tr>
+ 		<tr>
+ 			<td id=td21><img id=im21 ></img></td>
+ 			<td id=td22><img id=im22 ></img></td>
+ 			<td id=td23><img id=im23 ></img></td>
+ 		</tr>
+ 		<tr>
+ 			<td id=td31><img id=im31 ></img></td>
+ 			<td id=td32><img id=im32 ></img></td>
+ 			<td id=td33><img id=im33 ></img></td>
+ 		</tr>
+ 	</table>
+<script type="text/javascript">
+	function init()
+	{
+	alert("Best Luck Buddies!!!");
+	}
+	td11= document.getElementById("td11");
+	td12= document.getElementById("td12");
+	td13= document.getElementById("td13");
+
+	td21= document.getElementById("td21");
+	td22= document.getElementById("td22");
+	td23= document.getElementById("td23");
+
+	td31= document.getElementById("td31");
+	td32= document.getElementById("td32");
+	td33= document.getElementById("td33");
+
+	td11.addEventListener("click",fun11,false);
+	td12.addEventListener("click",fun12,false);
+	td13.addEventListener("click",fun13,false);
+
+	td21.addEventListener("click",fun21,false);
+	td22.addEventListener("click",fun22,false);
+	td23.addEventListener("click",fun23,false);
+
+	td31.addEventListener("click",fun31,false);
+	td32.addEventListener("click",fun32,false);
+	td33.addEventListener("click",fun33,false);
+
+flag=0;
+	
+	function fun11()
+	{
+		im11=document.getElementById("im11");
+		
+		
+		if(flag==0)
+		{
+			im11.src="x.png";
+			flag=1;
+			im11.value="a";
+			
+		}
+		else if(flag==1)
+		{
+			im11.src="o.png";
+			flag=0;
+			im11.value="b";
+		}
+		winner();
+		document.getElementById("td11").removeEventListener("click", fun11);
+	}
+
+	function fun12()
+	{
+		im12=document.getElementById("im12");
+	
+		if(flag==0)
+		{
+			im12.src="x.png";
+			flag=1;
+			im12.value="a";
+		}
+		else if(flag==1)
+		{
+			im12.src="o.png";
+			flag=0;
+			im12.value="b";
+		}
+	winner();
+	document.getElementById("td12").removeEventListener("click", fun12);		
+	}
+
+	function fun13()
+	{
+		im13=document.getElementById("im13");
+	if(flag==0)
+		{
+			im13.src="x.png";
+			flag=1;
+			im13.value="a";
+
+		}
+		else if(flag==1)
+		{
+			im13.src="o.png";
+			flag=0;
+			im13.value="b";
+		}
+			winner();
+			document.getElementById("td13").removeEventListener("click", fun13);
+	}
+
+	
+	function fun21()
+	{
+		im21=document.getElementById("im21");
+		if(flag==0)
+		{
+			im21.src="x.png";
+			flag=1;
+				im21.value="a";
+
+		}
+		else if(flag==1)
+		{
+			im21.src="o.png";
+			flag=0;
+				im21.value="b";
+
+		}
+			winner();
+			document.getElementById("td21").removeEventListener("click", fun21);
+	}
+
+	function fun22()
+	{
+		im22=document.getElementById("im22");
+		if(flag==0)
+		{
+			im22.src="x.png";
+			flag=1;
+				im22.value="a";
+
+		}
+		else if(flag==1)
+		{
+			im22.src="o.png";
+			flag=0;
+				im22.value="b";
+
+		}
+			winner();
+			document.getElementById("td22").removeEventListener("click", fun22);
+	}
+
+	function fun23()
+	{
+		im23=document.getElementById("im23");
+		if(flag==0)
+		{
+			im23.src="x.png";
+			flag=1;
+				im23.value="a";
+
+		}
+		else if(flag==1)
+		{
+			im23.src="o.png";
+			flag=0;
+				im23.value="b";
+
+		}
+			winner();
+			document.getElementById("td23").removeEventListener("click", fun23);
+	}
+
+
+	function fun31()
+	{
+		im31=document.getElementById("im31");
+		if(flag==0)
+		{
+			im31.src="x.png";
+			flag=1;
+				im31.value="a";
+
+		}
+		else if(flag==1)
+		{
+			im31.src="o.png";
+			flag=0;
+				im31.value="b";
+
+		}
+			winner();
+			document.getElementById("td31").removeEventListener("click", fun31);
+	}
+
+	function fun32()
+	{
+		im32=document.getElementById("im32");
+		if(flag==0)
+		{
+			im32.src="x.png";
+			flag=1;
+				im32.value="a";
+
+		}
+		else if(flag==1)
+		{
+			im32.src="o.png";
+			flag=0;
+				im32.value="b";
+
+		}
+			winner();
+			document.getElementById("td32").removeEventListener("click", fun32);
+	}
+
+	function fun33()
+	{
+		im33=document.getElementById("im33");
+		if(flag==0)
+		{
+			im33.src="x.png";
+			flag=1;
+				im33.value="a";
+
+		}
+		else if(flag==1)
+		{
+			im33.src="o.png";
+			flag=0;
+				im33.value="b";
+
+		}
+			winner();
+			document.getElementById("td33").removeEventListener("click", fun33);
+	}
+	function clearImg()
+	{
+		window.location.reload();
+	}
+	function winner()
+	{
+		
+		if((im11.value=="a") && (im12.value=="a") && (im13.value=="a"))
+		{
+				
+				td11.bgColor="green";
+				td12.bgColor="green";
+				td13.bgColor="green";
+				setTimeout("clearImg()",3000);
+
+
+				
+		}
+		else if((im11.value=="b") && (im12.value=="b") && (im13.value =='b'))
+		{
+			td11.bgColor="green";
+			td12.bgColor="green";
+			td13.bgColor="green";
+			setTimeout("clearImg()",3000);
+		}
+		else if((im21.value=="a") && (im22.value=="a") && (im23.value=='a'))
+		{
+			
+			td21.bgColor="green";
+			td22.bgColor="green";
+			td23.bgColor="green";
+			setTimeout("clearImg()",3000);
+
+		}
+		else if((im21.value =='b') && (im22.value == 'b') && ( im23.value == 'b'))
+		{
+			td21.bgColor="green";
+			td22.bgColor="green";
+			td23.bgColor="green";
+			setTimeout("clearImg()",3000);
+		}	
+		else if((im31.value=='a') && (im32.value=='a') && (im33.value=='a') )	
+		{
+			td31.bgColor="green";
+			td32.bgColor="green";
+			td33.bgColor="green";
+			setTimeout("clearImg()",3000);
+		}
+		else if((im31.value=='b' )&& (im32.value=='b') && (im33.value == 'b'))
+		{
+			td31.bgColor="green";
+			td32.bgColor="green";
+			td33.bgColor="green";
+			setTimeout("clearImg()",3000);
+		}
+		else if((im11.value=='a') &&( im21.value=='a') && (im31.value== 'a'))
+		{
+			td11.bgColor="green";
+			td21.bgColor="green";
+			td31.bgColor="green";
+			setTimeout("clearImg()",3000);
+		}
+		else if((im11.value=='b') && (im21.value=='b') && (im31.value == 'b'))
+		{
+			td11.bgColor="green";
+			td21.bgColor="green";
+			td31.bgColor="green";
+			setTimeout("clearImg()",3000);
+		}
+		else if((im12.value=='a') && (im22.value=='a') && (im32.value== 'a'))
+		{
+			td12.bgColor="green";
+			td22.bgColor="green";
+			td32.bgColor="green";
+			
+			setTimeout("clearImg()",3000);
+		}
+		else if((im12.value=='b') && (im22.value=='b') && (im32.value=='b'))
+		{
+			td12.bgColor="green";
+			td22.bgColor="green";
+			td32.bgColor="green";
+			
+			setTimeout("clearImg()",3000);
+		}
+		else if((im13.value=='a') && (im23.value=='a') &&(im33.value=='a'))
+		{
+			td13.bgColor="green";
+			td23.bgColor="green";
+			td33.bgColor="green";
+			
+			setTimeout("clearImg()",3000);
+		}
+		else if((im13.value=='b') && (im23.value=='b') &&( im33.value=='b'))
+		{
+			td13.bgColor="green";
+			td23.bgColor="green";
+			td33.bgColor="green";
+			
+			setTimeout("clearImg()",3000);
+		}
+		else if((im11.value=='a' )&& (im22.value=='a') && (im33.value=='a'))
+		{
+			td11.bgColor="green";
+			td22.bgColor="green";
+			td33.bgColor="green";
+			
+			setTimeout("clearImg()",3000);
+
+		}
+		else if((im11.value=='b') && (im22.value=='b') && (im33.value=='b'))
+		{
+			td11.bgColor="green";
+			td22.bgColor="green";
+			td33.bgColor="green";
+			
+			setTimeout("clearImg()",3000);
+		}
+		else if((im13.value=='a') && (im22.value=='a') && (im31.value=='a'))
+		{
+			td13.bgColor="green";
+			td22.bgColor="green";
+			td31.bgColor="green";
+			
+			setTimeout("clearImg()",3000);
+
+		}
+		else if((im13.value=='b') && (im22.value=='b') && (im31.value=='b'))
+		{
+			td13.bgColor="green";
+			td22.bgColor="green";
+			td31.bgColor="green";
+			
+			setTimeout("clearImg()",3000);
+		}
+
+
+	}
+</script>
+ </body>
+</html>
